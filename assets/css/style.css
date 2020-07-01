@@ -668,4 +668,96 @@ a {
   font-weight: bold;
   margin-bottom: 20px;
 }
+
+.hero-section-w {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 500px;
+}
+
+.hero-section-w__left {
+  margin: 96px 0 0;
+  padding: 2rem 1rem 2rem;
+}
+
+.hero-section-w__left .hero-outter {
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-section-w__left .hero-outter {
+    max-width: 400px;
+  }
+  .hero-section-w__left .hero-outter h1 {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .hero-section-w__left .hero-outter {
+    max-width: 100%;
+  }
+}
+
+.hero-section-w__left .hero-shape-bg {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  left: -168px;
+  bottom: -52px;
+  z-index: 0;
+  padding: 190px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-section-w__left .hero-shape-bg {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .hero-section-w__left .hero-shape-bg {
+    left: -200px;
+  }
+}
+
+.hero-section-w__left .hero-content {
+  z-index: 1;
+  position: relative;
+}
+
+.search-worksheets {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 90px 0 50px 0;
+}
+
+.search-worksheets__curve {
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: -37px;
+}
+
+.search-worksheets__form {
+  position: relative;
+  z-index: 3;
+  max-width: 700px;
+  margin: auto;
+}
+
+.search-worksheets__form input[type='text'] {
+  padding: 26px 16px;
+}
+
+.search-worksheets__icon {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #ffffff;
+}
 /*# sourceMappingURL=style.css.map */
