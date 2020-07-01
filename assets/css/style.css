@@ -37,7 +37,7 @@ a {
 .main-header {
   top: 0;
   height: 96px;
-  z-index: 9;
+  z-index: 999 !important;
 }
 
 .main-header__nav a {
@@ -117,7 +117,7 @@ a {
   padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .hero-section__left h1 {
     font-size: 32px;
     padding-bottom: 10px;
@@ -130,7 +130,7 @@ a {
   font-weight: bolder;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
   .hero-section__left h1 span {
     font-size: 30px;
     font-weight: bold;
@@ -215,39 +215,87 @@ a {
   position: relative;
   background-color: #f6f6f6;
   min-height: 700px;
+  overflow: hidden;
 }
 
 .free-bundles__topimg {
   position: absolute;
-  top: -50px;
+  top: -120px;
   width: 100%;
   margin-top: 20px;
   left: 0;
+  z-index: 2;
 }
 
 .free-bundles__bottomimg {
   position: absolute;
   bottom: 0px;
-  width: 100%;
   left: 0;
   z-index: 2;
+  width: 100%;
 }
 
 .free-bundles__shapeone, .free-bundles__shapetwo {
   position: absolute;
-  left: -20px;
-  bottom: 0px;
+  left: -150px;
+  bottom: 80px;
   max-width: 100%;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1400px) {
+  .free-bundles__shapeone, .free-bundles__shapetwo {
+    bottom: 30px;
+    left: -200px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .free-bundles__shapeone, .free-bundles__shapetwo {
+    bottom: -20px;
+    left: -260px;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  .free-bundles__shapeone, .free-bundles__shapetwo {
+    bottom: -12px;
+    left: -260px;
+  }
 }
 
 .free-bundles__shapetwo {
   left: unset;
-  right: 0;
+  right: -52px;
+  bottom: 100px;
+}
+
+@media only screen and (max-width: 359px) {
+  .free-bundles__shapetwo {
+    right: -124px;
+    bottom: -70px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .free-bundles__shapetwo {
+    right: -150px;
+    bottom: -20px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .free-bundles__shapetwo {
+    right: -90px;
+    bottom: 40px;
+  }
 }
 
 .free-bundles__content {
   position: relative;
+  padding: 60px 0 230px;
   margin: 0 auto;
+  z-index: 99;
 }
 
 .free-bundles__heading, .advance-container {
@@ -274,6 +322,7 @@ a {
 }
 
 .free-bundles__buttons ul {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
@@ -320,7 +369,9 @@ a {
 }
 
 .widget-slider__description {
-  margin: auto;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .widget-slider.slick-slider {
@@ -329,8 +380,8 @@ a {
 
 .widget-slider .slick-dots {
   width: 50%;
-  left: 32%;
-  bottom: 25px;
+  left: 34%;
+  bottom: 35px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -341,12 +392,22 @@ a {
   }
 }
 
+.widget-slider .slick-dots li button::before {
+  font-size: 14px;
+}
+
 .ads-widget {
   background-image: url("../images/heros-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+@media only screen and (max-width: 992px) {
+  .ads-widget {
+    text-align: center;
+  }
 }
 
 .ads-widget__left {
@@ -356,6 +417,7 @@ a {
 
 .ads-widget__left h4 {
   font-size: 36px;
+  padding-bottom: 1.2rem;
 }
 
 .ads-widget__left h4 span {
@@ -366,12 +428,20 @@ a {
 @media only screen and (max-width: 992px) {
   .ads-widget__left h4 {
     font-size: 32px;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
   }
+}
+
+.ads-widget__left p {
+  padding-bottom: 1.5rem;
 }
 
 .ads-widget__btn {
   background-color: #68CF00;
   padding: 7px 28px;
+  margin-bottom: 1.5rem;
 }
 
 .ads-widget__right span {
@@ -390,6 +460,12 @@ a {
   margin: auto;
 }
 
+@media only screen and (max-width: 992px) {
+  .workflow-section__right {
+    text-align: center;
+  }
+}
+
 .workflow-section__right h3 {
   margin-bottom: 30px;
 }
@@ -403,11 +479,16 @@ a {
   border-color: #FF9933;
   color: #ffffff;
   padding: 7px 32px;
+  margin-bottom: 2rem;
 }
 
 .workflow-section__right a:hover {
   background-color: #cc6600;
   color: #ffffff;
+}
+
+.workflow-section__left {
+  width: 100%;
 }
 
 .pick-a-plan {
