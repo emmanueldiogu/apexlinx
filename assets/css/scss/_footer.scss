@@ -1,0 +1,19 @@
+.main-footer {
+    background-color: lighten($primary-color, 20%);
+    color: white;
+    padding: 90px 0 20px;
+    a {
+        color: white;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    ul {
+        list-style-type: none;
+    }
+    &__headings {
+        font-size: larger;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}

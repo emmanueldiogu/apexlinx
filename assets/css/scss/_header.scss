@@ -1,0 +1,58 @@
+.main-header {
+    top: 0;
+    height: 96px;
+    z-index: 9;
+    &__nav {
+        a{
+            color: $dark-color;
+            font-weight: 500;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &__brand {
+        color: $primary-color;
+        font-size: 32px;
+        font-weight: 800 !important;
+    }
+    &__toggle {
+        color: $light-color;
+        background-color: $accent-color;
+        span {
+            color: $light-color;
+        }
+    }
+    &__collapse.show {
+        background-color: $light-color;
+        padding: 15px 20px;
+        margin-top: 5px;
+        border-top: 3px solid $accent-color;
+        box-shadow: 0 .125rem .25rem rgba($dark-color, 0.075);
+    }
+    &__cta {
+        padding: 8px 48px;
+    }
+    &__search {
+        &.show::after {
+            content: "";
+            display: block;
+            width: 0; 
+            height: 0; 
+            // border-top: 12px solid transparent;
+            border-bottom: 12px solid $accent-color;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            bottom: 0;
+            left: 0;
+            right: 0; 
+        }
+    }
+    &__search-icon {
+        font-size: 14px;
+        color: $accent-color;
+    }
+    &__ul-one-form {
+        top: 92.5px;
+    }
+}

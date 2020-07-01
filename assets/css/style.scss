@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import './scss/variable';
+@import './scss/mixins';
+@import './scss/header';
+@import './scss/sections';
+@import './scss/footer';

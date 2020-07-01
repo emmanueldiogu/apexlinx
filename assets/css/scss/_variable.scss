@@ -1,0 +1,30 @@
+$primary-color: #261E66;
+$secondary-color: #68CF00;
+$accent-color: #FF9933;
+$light-color: #ffffff;
+$dark-color: #000;
+
+a {
+    color: $accent-color;
+}
+
+.apex-btn {
+    background-color: $accent-color;
+    color: $light-color !important;
+    border-color: $accent-color;
+    &:hover {
+        background-color: darken($accent-color, 10%);
+    }
+}
+.apex-primary-btn {
+    background-color: lighten($primary-color, 30%);
+    color: $light-color !important;
+    border-color: lighten($primary-color, 30%);
+    &:hover {
+        background-color: $primary-color;
+    }
+}
+.apex-outline-btn {
+    color: $accent-color;
+    border-color: $accent-color;
+}
