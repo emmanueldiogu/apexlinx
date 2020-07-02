@@ -4,6 +4,9 @@
     background-size: cover;
     position: relative;
     min-height: 500px;
+    @include xsmallScreen {
+        min-height: 390px;
+    }
     &__left {
         margin: 96px 0 0;
         padding: 2rem 1rem 2rem;
@@ -17,7 +20,8 @@
                 }
             }
             @include xsmallScreen {
-                max-width: 100%;
+                max-width: 65%;
+
             }
         }
         .hero-shape-bg {
@@ -35,12 +39,32 @@
                 height: 600px;
             }
             @include xsmallScreen {
-                left: -200px;
+                left: -300px;
             }
         }
         .hero-content {
             z-index: 1;
             position: relative;
+            a {
+                background-color: lighten($primary-color, 20%);
+                border-color: lighten($primary-color, 20%);
+                color: $light-color;
+            }
+            @include xsmallScreen {
+                padding: 0 !important;
+                h1 {
+                    font-size: 21px;
+                    font-weight: 800;
+                }
+                p {
+                    font-size: .9rem;
+                }
+                a {
+                    font-size: .7rem;
+                    padding: .7rem .2rem !important;
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -48,11 +72,17 @@
     position: relative;
     background-color: #f6f6f6;
     padding: 90px 0 50px 0;
+    @include xsmallScreen {
+        padding-top: 60px;
+    }
     &__curve {
         width: 100%;
         z-index: 2;
         position: absolute;
         top: -37px;
+        @include xsmallScreen {
+            top: -30px;
+        }
     }
     &__form {
         position: relative;
@@ -67,5 +97,61 @@
         padding-left: 16px;
         padding-right: 16px;
         background-color: $light-color;
+    }
+}
+.search-wrapper {
+    &__sidebar {
+        @include mediumScreen {
+            display: none;
+            position: fixed;
+            left: 0;
+            width: 50vw;
+            top: 96px;
+            z-index: 1000;
+            padding: 1rem;
+            background-color: rgba($light-color, .9);
+        }
+    }
+}
+.result-bar {
+    &__right {
+        @include mediumScreen {
+            width: 100% !important;
+            flex-basis: unset;
+            flex-grow: unset;
+            max-width: unset;
+            margin-top: .5rem;
+            button {
+                width: 100%;
+            }
+            .dropdown-menu {
+                width: 80%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                top: -48px;
+            }
+        }
+    }
+    &__filter {
+        display: none;
+        button {
+            padding: .5rem 1.3rem;
+            background-color: lighten($primary-color, 15%);
+            border-color: lighten($primary-color, 15%);
+            color: $light-color;
+            &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: $light-color;
+            }
+        }
+        @include mediumScreen {
+            display: block;
+        }
+    }
+    &__left {
+        @include mediumScreen {
+            text-align: right;
+        }
     }
 }

@@ -377,12 +377,17 @@
         left: 0;
         right: 0;
         margin: auto;
+        min-height: 150px;
         border-radius: .7rem .7rem 0 0;
         background-color: rgba($dark-color, .6);
         color: $light-color;
         font-size: 30px;
         display: none;
         z-index: 2;
+        @include xsmallScreen {
+            padding: 20px;
+            font-size: 16px;
+        }
     }
     &__info {
         position: absolute;
@@ -394,6 +399,9 @@
         border-radius: 0 0 .7rem .7rem;
         padding: .9rem;
         font-size: 13px;
+        @include xsmallScreen {
+            font-size: 10px;
+        }
         h5 {
             font-size: 13px;
             padding-bottom: 15px;
@@ -401,14 +409,23 @@
             a {
                 color: lighten($dark-color, 10%);
             }
+            @include xsmallScreen {
+                font-size: 11px;
+            }
         }
         &__hover {
             display: none;
+            @include xsmallScreen {
+                min-height: 70px;
+            }
         }
         &__rating {
             margin-bottom: 10px;
             margin-top: 10px;
             color: darken($light-color, 15%);
+            @include xsmallScreen {
+                margin: 0;
+            }
         }
         &__difficulty {
             display: flex;
@@ -428,6 +445,10 @@
                 }
                 &:first-child {
                     clip-path: polygon(0% 0%, 78% 0%, 100% 50%, 78% 100%, 0% 100%);
+                }
+                @include xsmallScreen {
+                    width: 16px;
+                    height: 12px;
                 }
             }
         }

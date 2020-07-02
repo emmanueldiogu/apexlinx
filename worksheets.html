@@ -118,23 +118,26 @@
               </nav>
               <div class="result-bar mx-auto container">
                   <div class="navbar mx-auto">
-                      <div class="float-left col">
+                      <div class="col text-left result-bar__filter">
+                      <button class="btn"> <i class="fas fa-plus mr-1"></i>Filter</button>
+                      </div>
+                        <div class="col result-bar__left">
                           <span>4579</span> results
-                      </div>
-                      <div class="float-right col text-right">
-                          <button class="btn btn-outline-secondary rounded-pill dropdown-toggle px-4 py-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Latest</button>
-                          <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Latest</a>
-                          <a class="dropdown-item" href="#">Popularity</a>
-                          <a class="dropdown-item" href="#">Most Downloads</a>
-                          <a class="dropdown-item" href="#">A-Z</a>
-                          <a class="dropdown-item" href="#">Free Sheets</a>
-                      </div>
+                        </div>
+                        <div class="col text-right result-bar__right">
+                            <button class="btn btn-outline-secondary rounded-pill dropdown-toggle px-4 py-2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Latest</button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Latest</a>
+                            <a class="dropdown-item" href="#">Popularity</a>
+                            <a class="dropdown-item" href="#">Most Downloads</a>
+                            <a class="dropdown-item" href="#">A-Z</a>
+                            <a class="dropdown-item" href="#">Free Sheets</a>
+                        </div>
                   </div>
               </div>
               <div class="tab-content container" id="nav-tabContent">
                   <div class="row">
-                      <aside class="col-lg-2">
+                      <aside class="col-lg-2 search-wrapper__sidebar">
                           <div class="container mb-4">
                               <h5>By Age</h5>
                               <ul class="nav flex-column">
@@ -172,7 +175,7 @@
                           <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                               <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -216,7 +219,7 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -260,7 +263,7 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -304,7 +307,7 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -348,7 +351,7 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -392,7 +395,7 @@
                                             </figure>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-xs-6 worksheets mb-4">
+                                    <div class="col-lg-3 col-md-6 col-6 worksheets mb-4">
                                         <div class="card worksheets__card">
                                             <div class="worksheets__search text-center">
                                                 <i class="fas fa-search-plus"></i>
@@ -441,6 +444,18 @@
                           </div>
                           <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
                           <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+
+                          <div class="container mb-5">
+                              <div class="row">
+                                  <a href="#" class="btn">Next</a>
+                                  <ul class="nav">
+                                      <li><a href="#"><</a></li>
+                                      <li>1</li>
+                                      <li><a href="#">></a></li>
+                                      <li> of 96</li>
+                                  </ul>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
