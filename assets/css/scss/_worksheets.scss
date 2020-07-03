@@ -124,20 +124,37 @@
         }
     }
     &__sidebar {
+        position: relative;
         ul li a:hover{
-            border-left: 3px solid $accent-color;
-            padding-left: .2rem;
+            position: relative;
             text-decoration: none;
+            &::before {
+                position: absolute;
+                content: '';
+                height: 100%;
+                width: 3px;
+                left: -8px;
+                background-color: $accent-color;
+            }
         }
         @include mediumScreen {
             display: none;
             position: fixed;
+            height: 100%;
             left: 0;
+            top: 0;
             width: 50vw;
-            top: 96px;
             z-index: 1000;
-            padding: 1rem;
+            padding: 3rem 1rem;
             background-color: rgba($light-color, .9);
+        }
+    }
+    #contentSidebar h4 {
+        display: none;
+        padding-left: 1rem;
+        button {
+            font-weight: 900;
+            font-size: 1.2rem;
         }
     }
     .nav-tabs .nav-link.active  {
@@ -237,7 +254,7 @@
     }
     &__details {
         h4 {
-            color: $accent-color;
+            color: #e41749;
         }
     }
 }
